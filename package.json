@@ -1,0 +1,17 @@
+{
+  "name": "map-design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-native": "^0.63.30"
+  },
+  "dependencies": {
+    "styled-components": "^5.2.0"
+  }
+}
