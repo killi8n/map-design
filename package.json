@@ -1,8 +1,33 @@
 {
   "name": "map-design",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.3",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "rm -rf ./storybook-static && build-storybook",
+    "build-storybook:no-dll": "rm -rf ./storybook-static && build-storybook --no-dll",
+    "build": "rm -rf ./lib && npx tsc --build ./tsconfig.json && npx tsc --declaration --outDir ./lib/types --emitDeclarationOnly",
+    "build:components": "rm -rf ./lib && npx tsc --build ./tsconfig.json",
+    "build:types": "npx tsc --declaration --outDir ./lib/types --emitDeclarationOnly",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src/components --out-dir ./lib/esm --extensions .ts,.tsx --ignore **.stories_disabled.js,**/stories/Example/**",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./src/components --out-dir ./lib/cjs --extensions .ts,.tsx --ignore **.stories_disabled.js,**/stories/Example/**"
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/esm.index.js",
+  "types": "./lib/types/index.d.ts",
+  "sideEffects": "false",
+  "files": [
+    "lib"
+  ],
   "license": "MIT",
+  "author": {
+    "email": "killi8n.dev@gmail.com",
+    "name": "killi8n",
+    "url": "https://github.com/killi8n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killi8n/map-design.git"
+  },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
@@ -10,7 +35,9 @@
     "styled-components": ">=5.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "@storybook/addon-actions": "^6.1.0-alpha.33",
     "@storybook/addon-essentials": "^6.1.0-alpha.33",
     "@storybook/addon-links": "^6.1.0-alpha.33",
@@ -22,6 +49,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-react-native-web": "^0.14.4",
+    "cross-env": "^7.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
@@ -31,10 +59,5 @@
   },
   "dependencies": {
     "react-native-web": "^0.14.4"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "rm -rf ./storybook-static && build-storybook",
-    "build-storybook:no-dll": "rm -rf ./storybook-static && build-storybook --no-dll"
   }
 }
