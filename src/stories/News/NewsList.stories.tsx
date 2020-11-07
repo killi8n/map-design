@@ -1,11 +1,6 @@
 import React, { FC } from 'react';
 import { NewsItem, NewsList as NewsListStorybookComponent } from '../../components'
 
-export default {
-    title: 'News/NewsList',
-    component: NewsListStorybookComponent
-}
-
 const newsList = [
     {
         title: "뉴스아이템 1",
@@ -79,6 +74,10 @@ const Template: FC = (_: any) => {
 
 export const NewsList: any = Template.bind({})
 NewsList.args = {
-    primary: true,
     label: 'NewsList'
+}
+
+export default {
+    title: 'News/NewsList',
+    component: NewsListStorybookComponent
 }
