@@ -1,6 +1,6 @@
 {
   "name": "map-design",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "rm -rf ./storybook-static && build-storybook",
