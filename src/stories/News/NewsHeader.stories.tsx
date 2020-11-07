@@ -7,6 +7,7 @@ const Template = () => {
             horizontalPadding={15}
             headerTitle="힙합엘이 뉴스"
             onPressMoreButton={() => {}}
+            showRightMoreButton
         />
     );
 };

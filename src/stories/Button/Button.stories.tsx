@@ -1,23 +1,32 @@
 import React, { FC } from 'react'
 import ButtonComponent from '../../components/Button'
+import TextComponent from '../../components/Text'
 
 const BaseTemplate: FC = (_: any) => {
     return (
-        <ButtonComponent
-            theme='base'
-            buttonText='Base Button'
-            fontSize={20}
-        />
+        <ButtonComponent rounded>
+            <TextComponent
+                customStyles={{
+                    color: 'white'
+                }}
+            >
+                Base Button
+            </TextComponent>
+        </ButtonComponent>
     )
 }
 
 const HighlightedTemplate: FC = (_: any) => {
     return (
-        <ButtonComponent
-            theme='highlighted'
-            buttonText='Highlighted Button'
-            fontSize={20}
-        />
+        <ButtonComponent rounded>
+            <TextComponent
+                customStyles={{
+                    color: 'yellow'
+                }}
+            >
+                Highlighted Button
+            </TextComponent>
+        </ButtonComponent>
     )
 }
 

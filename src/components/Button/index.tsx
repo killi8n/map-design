@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
-import { BaseToucableOpacity, ButtonText } from './styled';
+import { BaseToucableOpacity } from './styled';
 import { ButtonProps } from './types';
 
-const Button: FC<ButtonProps> = ({ theme = 'base', buttonText, fontSize }) => {
+const Button: FC<ButtonProps> = ({ children, rounded, customStyles }) => {
     return (
-        <BaseToucableOpacity>
-            <ButtonText numberOfLines={0} theme={theme} fontSize={fontSize}>
-                {buttonText}
-            </ButtonText>
+        <BaseToucableOpacity
+            style={customStyles}
+            rounded={rounded}
+        >
+            {children}
         </BaseToucableOpacity>
     );
 };

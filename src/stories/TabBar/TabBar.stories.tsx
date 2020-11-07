@@ -2,15 +2,6 @@ import React, { FC, useState } from 'react'
 import TabBarStorybookComponent from '../../components/TabBar'
 import TabBarButtonStorybookComponent from '../../components/TabBarButton'
 
-export default {
-  title: 'TabBar/TabBar',
-  component: TabBarStorybookComponent,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-  },
-  subcomponents: { TabBarButton: TabBarButtonStorybookComponent }
-};
-
 const mockRoutes = [
   {
     title: "뉴스"
@@ -50,4 +41,13 @@ export const TabBar: any = Template.bind({});
 TabBar.args = {
   primary: true,
   label: 'TabBar',
+};
+
+export default {
+  title: 'TabBar/TabBar',
+  component: TabBarStorybookComponent,
+  argTypes: {
+    // backgroundColor: { control: 'color' },
+  },
+  subcomponents: { TabBarButton: TabBarButtonStorybookComponent }
 };

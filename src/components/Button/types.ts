@@ -1,14 +1,10 @@
-import { ButtonTheme } from '../../types'
+import { StyleProp, ViewStyle } from 'react-native';
 
 export interface ButtonProps {
-    theme: ButtonTheme
-    buttonText: string
-    fontSize: number;
+    rounded?: boolean;
+    customStyles?: StyleProp<ViewStyle>
 }
 
-export interface BaseToucableOpacityProps {}
-
-export interface ButtonTextProps {
-    theme: ButtonTheme;
-    fontSize: number;
+export interface BaseToucableOpacityProps {
+    rounded?: boolean;
 }
