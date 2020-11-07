@@ -15,20 +15,3 @@ export const TitleText = styled.Text`
     font-size: 18px;
     font-weight: 700;
 `;
-export const MoreButton = styled.TouchableOpacity`
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    background-color: black;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-style: solid;
-    border-radius: 3px;
-`;
-export const MoreText = styled.Text`
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-`;

@@ -1,5 +1,6 @@
 export interface NewsHeaderProps {
-    horizontalPadding?: number
     headerTitle: string
+    horizontalPadding?: number
+    showRightMoreButton?: boolean
     onPressMoreButton: () => Promise<void> | void
 }
