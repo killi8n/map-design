@@ -1,0 +1,1 @@
+export type ButtonTheme = 'base' | 'highlighted'
